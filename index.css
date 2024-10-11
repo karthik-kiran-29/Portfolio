@@ -11,6 +11,12 @@
     --font:#f8c3d7;
 }
 
+#my-image{
+    width: 100%;
+    max-width: 200px; 
+    height: auto; 
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
