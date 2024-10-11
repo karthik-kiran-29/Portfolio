@@ -4,16 +4,43 @@
     box-sizing: border-box;
 }
 
+:root {
+    --main-color:#000000;
+    --secondary:#150050;
+    --third:#3F0071;
+    --font:#f8c3d7;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color:var(--main-color);
+    color: var(--font);
+    padding: 0 10%;
+}
+
+#particles-js canvas {
+    display: block;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+    transition: opacity .8s ease, transform 1.4s ease
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0
 }
 
 .container img{
     border-radius: 50%;
-    border:2px solid var(linear-gradient(#218838,#333));
+    border:2px solid var(--secondary);
 }
 .container {
     width: 80%;
@@ -41,19 +68,19 @@ body {
     margin: 5px 2px;
   }
 
-header {
-    background-color: #333;
-    color: #fff;
+.header {
+    color:var(--font);
     padding: 20px 0;
     text-align: center;
+    display: flex;
 }
 
-header h1 {
+.header h1 {
     margin-bottom: 10px;
     font-size: 2.5em;
 }
 
-header p {
+.header p {
     margin-bottom: 20px;
     font-size: 1.2em;
 }
@@ -61,8 +88,8 @@ header p {
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #28a745;
-    color: #fff;
+    background-color:var(--secondary);
+    color: var(--font);
     text-decoration: none;
     margin: 10px;
     border-radius: 5px;
@@ -89,8 +116,8 @@ header p {
 }
 
 .project-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--secondary);
+    border: 1px solid var(--third);
     padding: 20px;
     margin: 10px 0;
     border-radius: 5px;
@@ -108,8 +135,8 @@ header p {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--main-color);
+    color: var(--font);
     text-align: center;
     padding: 10px 0;
 }
